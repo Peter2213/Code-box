@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins' , sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    color: #fff;
+    background-color: #1f242a;
+}
+span{
+    color : #0ef;   
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.header{
+    position: fixed;
+    top : -10px;
+    left : 0;
+    width: 100%;
+    padding: 0.9rem 9%;
+    background-color: #1f242a;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{  
+    height: 100px;
+    width: 100px;
+}
+#menu{
+    font-size: 3.6rem;
+    color: #fff;
+    display: none;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color : #fff;
+    margin-left: 4rem;
+    transition: .3s;
+}
+.navbar a:hover{
+    color: #0ef;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img{
+    width: 35vw;
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.content h1{
+    font-size : 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.content p{
+   font-size: 1.9rem;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    background-color: #323946;
+}
+.about-img img{
+    width: 30vw;
+}
+.about-content h2{
+    font-size : 3.6rem;
+    font-weight: 700;
+}
+.about-content p{
+    font-size: 1.9rem;
+ }
+ .courses h2{
+    margin-bottom: 10rem;
+ }
+ .courses-container{
+    display: grid;
+    margin-top: 200px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+ }
+ .courses-container .courses-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #1f242a;
+    overflow: hidden;
+    display: flex;
+ }
+ .courses-box img{
+    width: 100%;
+ }
+ .courses-box .courses-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1) , #0ef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+ }
+ .courses-layer h4 {
+    font-size: 3rem;
+ }
+ .courses-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+ }
+@media  screen and (max-width: 900px) {
+    .courses-container{
+        display: grid;
+        margin-top: 0px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+     }
+}
+.contact{
+    background-color: #323946;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #1f242a;
+}
+#last-h{
+    margin-top: 20px;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input, 
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #1f242a;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form textarea{
+    resize: none ;
+}
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding : 2rem 8%;
+    background-color: #1f242a;
+}
+.footer p{
+    font-size: 1.5rem;
+}
+/* -------------------BreakPoints----------------- */
+@media (max-width:1200px){
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width:991px){
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width : 768px){
+    #menu{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top : 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242a;
+        border-top: .1rem solid rgba(0,0,0, .2) ;
+        box-shadow: 0 .5rem  1rem rgba(0,0,0, .2);
+        display: none;
+    }
+     .navbar.active{
+        display: block;
+     }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .content h3 {
+        font-size: 2.6 rem;
+    }
+    .content h1 {
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
